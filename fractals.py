@@ -38,23 +38,28 @@ def vonKoch(length, level):
     direction 0, the second heads in direction 120 from the first side, and the third 
     heads in direction 240 from the end of the second side. """
     
-    window = GraphWin( 'von Koch Snowflake', length * 1.5, length * 1.5)
-    p1 = Point(length / 4.0, length)
-    # one full snowflake takes three segments, each starting at the endpoint of the previous segment
-    p2 = vonKochSegment(level, p1, 0.0, length, window)
-    p3 = vonKochSegment(level, p2, 120.0, length, window)
-    p4 = vonKochSegment(level, p3, 240.0, length, window)
+    # if statement checks if level parameter is a positive integer
+    if type(level) == type(1) and level > 0:
+        window = GraphWin( 'von Koch Snowflake', length * 1.5, length * 1.5)
+        p1 = Point(length / 4.0, length)
+        # one full snowflake takes three segments, each starting at the endpoint of the previous segment
+        p2 = vonKochSegment(level, p1, 0.0, length, window)
+        p3 = vonKochSegment(level, p2, 120.0, length, window)
+        p4 = vonKochSegment(level, p3, 240.0, length, window)
     
-# We ask you to kindly not use any level greater than 5
-# that uses too much precision for pixels to handle.
+    else:
+        print "Please give level an integer value greater than 0"
+    
+            
+# Note: When you use any level greater than 5, there
+# is too much precision for the pixels to handle.
 # We ran into some 'squished' snowflakes once we started using
-# small windows or large levels, probably due to the
-# constraints of pixels only being integers
+# small windows or large levels because of the
+# constraint that pixels coordinates can only be integers.
+# For length, input any number greater than zero
 
-
-# draws a snowflake of level 3. Modify the second input value to
-# change the level of the drawn snowflake
-vonKoch(400, 3)
+# draws a snowflake of level 3
+vonKoch(500, 3)
 
 
 # this line of user input keeps the graphics window open until the user presses 'enter'
