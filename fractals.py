@@ -52,7 +52,8 @@ def vonKoch(length, level):
 # constraints of pixels only being integers
 
 
-# draws a snowflake of level 3
+# draws a snowflake of level 3. Modify the second input value to
+# change the level of the drawn snowflake
 vonKoch(400, 3)
 
 
