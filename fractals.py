@@ -3,7 +3,6 @@
 # by Alex Olson & Kiya Govek
 # CS111, Fall 2014
 
-
 import math
 from graphics import *
 
@@ -49,7 +48,7 @@ def vonKoch(length, level):
 # We ask you to kindly not use any level greater than 5
 # that uses too much precision for pixels to handle.
 # We ran into some 'squished' snowflakes once we started using
-# with small windows or large levels, probably because of the
+# small windows or large levels, probably due to the
 # constraints of pixels only being integers
 
 
